@@ -6,8 +6,9 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://example.com",
+  site: "https://robinschreiner.github.io",
   integrations: [mdx(), sitemap()],
   output: "static",
-  base: "/yumkin-landingpage", // Replace with your repository name
+  base: "yumkin-landingpage", // Replace with your repository name
+  trailingSlash: "ignore"
 });
