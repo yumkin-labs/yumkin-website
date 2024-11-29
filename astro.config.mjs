@@ -10,5 +10,5 @@ export default defineConfig({
   integrations: [mdx(), sitemap()],
   output: "static",
   base: "yumkin-landingpage", // Replace with your repository name
-  trailingSlash: "ignore"
+  trailingSlash: "always"
 });
