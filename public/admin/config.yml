@@ -8,9 +8,11 @@ public_folder: "/uploads"
 collections:
   - name: "posts" # Folder for blog posts
     label: "Posts"
-    folder: "src/content/posts"
+    folder: "src/content/blog"
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }        
       - { label: "Body", name: "body", widget: "markdown" }
