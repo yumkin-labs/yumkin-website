@@ -28,8 +28,8 @@ jobs:
         npm config delete registry
         npm config set registry https://registry.npmjs.org/ --global
         npm cache clean --force
-        run: npm config list        
-        run: npm install --registry=https://registry.npmjs.org/
+        npm config list
+        npm install --registry=https://registry.npmjs.org/
 
     # Build the Astro app
     - name: Build Astro app
