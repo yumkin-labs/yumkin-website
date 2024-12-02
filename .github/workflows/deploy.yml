@@ -21,17 +21,15 @@ jobs:
         node-version: 20  # Use the version required by your Astro app
     
         # Set npm registry to public and clear old configs
-    - name: Set npm registry to public and clear cache
+    - name: Install dependencies
       run: |
-        npm config delete registry
-        npm config set registry https://registry.npmjs.org/ --global
         npm config delete proxy
         npm config delete https-proxy
+        npm config delete registry
+        npm config set registry https://registry.npmjs.org/ --global
         npm cache clean --force
-
-    # Install dependencies
-    - name: Install dependencies
-      run: npm install --registry=https://registry.npmjs.org/
+        run: npm config list        
+        run: npm install --registry=https://registry.npmjs.org/
 
     # Build the Astro app
     - name: Build Astro app
