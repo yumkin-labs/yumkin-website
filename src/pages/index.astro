@@ -2,7 +2,6 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import Tags from "../components/Tags.astro";
 import {
   SITE_TITLE,
   SITE_DESCRIPTION,
@@ -11,9 +10,7 @@ import {
 } from "../consts";
 import { getCollection } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
-import HeroImage from "../../public/images/yumkin-hero.jpg";
-import HeroImage2 from "../../public/images/yumkin-hero2.jpg";
-import HeroImage3 from "../../public/images/yumkin-hero3.jpg";
+import HeroImage from "../../public/images/yumkin-hero3.jpg";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -61,7 +58,7 @@ const sliderContent = [
       title={HERO_TITLE}
       description={HERO_SUBTITLE}
       heroSize="large"
-      heroImage={HeroImage3}
+      heroImage={HeroImage}
     />
     <main class="max-w-7xl mx-auto px-6 text-center space-y-24 pt-16">
       <section>
