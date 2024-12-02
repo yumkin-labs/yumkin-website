@@ -10,9 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Fallback to public npm registry
-      run: npm config set registry https://registry.npmjs.org/
-
     # Checkout the code
     - name: Checkout Code
       uses: actions/checkout@v4
@@ -22,7 +19,14 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 20  # Use the version required by your Astro app
-
+    
+        # Set npm registry to public and clear old configs
+    - name: Set npm registry to public and clear cache
+      run: |
+        npm config delete registry
+        npm config set registry https://registry.npmjs.org/ --global
+        npm cache clean --force
+        
     # Install dependencies
     - name: Install dependencies
       run: npm install
