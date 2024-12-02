@@ -5,13 +5,12 @@ export default {
     extend: {
       colors: {
         brand: "#00938A",
+        secondary: "#FFD8A1",
         dark: "#002422",
-        primary: {
-          DEFAULT: "#BA307A",
-        },
-        alert: {
-          DEFAULT: "#FFE6F2",
-        },
+      },
+      fontFamily: {
+        sans: ['"Inter"', "sans-serif"],
+        headline: ['"Montserrat"', "sans-serif"],
       },
     },
   },

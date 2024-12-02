@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "/fonts/inter/inter.css";
-@import "/fonts/montserrat/montserrat.css";
 /* Global Styles */
 body {
   font-family: "Inter", sans-serif;
