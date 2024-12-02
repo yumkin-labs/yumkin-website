@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: main # Or the branch you want to use
 
-media_folder: "public/images/uploads"
-public_folder: "/uploads"
+media_folder: "public/images/blog/uploads"
+public_folder: "uploads"
 
 collections:
   - name: "blog" # Folder for blog posts
