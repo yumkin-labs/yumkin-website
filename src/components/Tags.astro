@@ -1,0 +1,92 @@
+---
+import iPhone from "../../public/images/iphone.png";
+---
+
+<div
+  x-data="{ 
+    tab: window.location.hash ? window.location.hash.substring(1) : tabs[0].id,
+    tabs: [
+      {
+        id: 'tab-1',
+        label: 'Keine Sorgen mehr – wir machen Rezepte sicher für dich:',
+        description:
+          'Entdecke Rezepte aus unserer Datenbank die auf dich zugeschnitten sind oder füge deine eigenen hinzu. Yumkin passt Rezepte automatisch an, ohne mühsame Zutaten-Recherche.',
+        content: '../../public/images/yumkin-screenshot-1.jpg',
+      },
+      {
+        id: 'tab-2',
+        label:
+          'Automatische Anpassung an deine Allergien und Ernährungspräferenzen.',
+        description:
+          'Entdecke Rezepte aus unserer Datenbank die auf dich zugeschnitten sind oder füge deine eigenen hinzu. Yumkin passt Rezepte automatisch an, ohne mühsame Zutaten-Recherche.',
+        content: '../../public/images/yumkin-screenshot-2.jpg',
+      },
+      {
+        id: 'tab-3',
+        label: 'Clever einkaufen',
+        description:
+          'Erstelle Einkaufslisten, scanne Etiketten und vermeidest unerwünschte Überraschungen im Supermarkt.',
+        content: '../../public/images/yumkin-screenshot-3.jpg',
+      },
+      {
+        id: 'tab-4',
+        label: 'Community-Integration:',
+        description:
+          'Profitiere von einer inspirierenden Community. Tauscht euch aus und lernt voneinander z.B. über Rezepte, Erfahrungen oder Tipps & Tricks.',
+        content: '../../public/images/yumkin-screenshot-4.jpg',
+      },
+    ]
+  }"
+  id="tab_wrapper"
+  class="grid grid-cols-2 gap-8 slider items-center my-8 p-6"
+>
+  <!-- Tabs navigation -->
+  <nav class="overflow-hidden shadow-sm ring-1 ring-gray-100 rounded-lg">
+    <template x-for="tabData in tabs" :key="tabData.id">
+      <a
+        :class="{ 'border-brand': tab === tabData.id }"
+        @click.prevent="tab = tabData.id; window.location.hash = tabData.id"
+        href="#"
+        class="flex bg-white justify-between gap-x-6 p-4 hover:bg-gray-50 cursor-pointer inset-px border-2 border-transparent hover:border-brand items-center text-left first:rounded-t-lg last:rounded-b-lg transition-all group"
+      >
+        <div>
+          <h3 class="font-semibold" x-text="tabData.label"></h3>
+          <p x-text="tabData.description"></p>
+        </div>
+        <svg
+          class="size-6 flex-none text-transparent group-hover:text-brand"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </a>
+    </template>
+  </nav>
+
+  <!-- Tabs content -->
+  <div>
+    <template x-for="tabData in tabs" :key="tabData.id">
+      <div
+        x-show="tab === tabData.id"
+        class="p-4 flex justify-center relative h-full"
+      >
+        <img
+          :src="tabData.content"
+          class="max-h-[50rem] h-full w-auto mx-auto p-5"
+          alt=""
+        />
+        <img
+          src={`${iPhone.src});`}
+          class="absolute inset-0 h-full w-auto mx-auto"
+        />
+      </div>
+    </template>
+  </div>
+</div>
+
+<style></style>

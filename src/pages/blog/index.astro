@@ -17,7 +17,11 @@ const posts = (await getCollection("blog")).sort(
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
-    <Header heroSize="small" />
+    <Header
+      title="Neuigkeiten"
+      description="Immer up to date: Wissen, Tipps und mehr! Entdecke spannende Neuigkeiten, Updates und Inspirationen rund um Ernährung und unsere App."
+      heroSize="small"
+    />
     <main>
       <section class="max-w-7xl mx-auto px-6">
         <div class="grid grid-cols-4">

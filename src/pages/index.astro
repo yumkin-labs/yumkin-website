@@ -2,47 +2,133 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import Tags from "../components/Tags.astro";
+import {
+  SITE_TITLE,
+  SITE_DESCRIPTION,
+  HERO_TITLE,
+  HERO_SUBTITLE,
+} from "../consts";
 import { getCollection } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
+import HeroImage from "../../public/images/yumkin-hero.jpg";
+import HeroImage2 from "../../public/images/yumkin-hero2.jpg";
+import HeroImage3 from "../../public/images/yumkin-hero3.jpg";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
+
+const sliderContent = [
+  {
+    id: "tab-1",
+    label: "Keine Sorgen mehr – wir machen Rezepte sicher für dich:",
+    description:
+      "Entdecke Rezepte aus unserer Datenbank die auf dich zugeschnitten sind oder füge deine eigenen hinzu. Yumkin passt Rezepte automatisch an, ohne mühsame Zutaten-Recherche.",
+    content: "../../public/images/yumkin-screenshot-1.jpg",
+  },
+  {
+    id: "tab-2",
+    label:
+      "Automatische Anpassung an deine Allergien und Ernährungspräferenzen.",
+    description:
+      "Entdecke Rezepte aus unserer Datenbank die auf dich zugeschnitten sind oder füge deine eigenen hinzu. Yumkin passt Rezepte automatisch an, ohne mühsame Zutaten-Recherche.",
+    content: "../../public/images/yumkin-screenshot-2.jpg",
+  },
+  {
+    id: "tab-3",
+    label: "Clever einkaufen",
+    description:
+      "Erstelle Einkaufslisten, scanne Etiketten und vermeidest unerwünschte Überraschungen im Supermarkt.",
+    content: "../../public/images/yumkin-screenshot-3.jpg",
+  },
+  {
+    id: "tab-4",
+    label: "Community-Integration:",
+    description:
+      "Profitiere von einer inspirierenden Community. Tauscht euch aus und lernt voneinander z.B. über Rezepte, Erfahrungen oder Tipps & Tricks.",
+    content: "../../public/images/yumkin-screenshot-4.jpg",
+  },
+];
 ---
 
-<!doctype html>
 <html lang="de">
   <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <BaseHead title={SITE_DESCRIPTION} description={SITE_DESCRIPTION} />
   </head>
-  <body>
-    <Header heroSize="large" />
-    <main class="max-w-7xl mx-auto px-6">
+  <body class="bg-gray-50">
+    <Header
+      title={HERO_TITLE}
+      description={HERO_SUBTITLE}
+      heroSize="large"
+      heroImage={HeroImage3}
+    />
+    <main class="max-w-7xl mx-auto px-6 text-center space-y-24 pt-16">
       <section>
-        <h2>
-          Sag Tschüss zu komplizierter Rezeptsuche und unsicherem Einkaufen. Mit
-          Yumkin ist Genuss einfacher als je zuvor!
-        </h2>
-        <p>
-          Eine Unverträglichkeit oder Allergie ist diagnostiziert und man ist im
-          Alltag überfordert mit der Frage: „Was kann ich denn jetzt überhaupt
-          noch essen?”
-        </p>
+        <header class="max-w-2xl mx-auto">
+          <h2 class="text-xl md:text-2xl lg:text-3xl mb-4">
+            Sag Tschüss zu komplizierter Rezeptsuche und unsicherem Einkaufen.
+            Mit Yumkin ist Genuss einfacher als je zuvor!
+          </h2>
+          <p class="text-lg opacity-70">
+            Eine Unverträglichkeit oder Allergie ist diagnostiziert und man ist
+            im Alltag überfordert mit der Frage: „Was kann ich denn jetzt
+            überhaupt noch essen?”
+          </p>
+        </header>
+        <div class="slider grid grid-cols-2 items-center my-8 p-6">
+          <ul
+            role="list"
+            class="overflow-hidden shadow-sm ring-1 ring-gray-100 rounded-lg"
+          >
+            {
+              sliderContent.map(({ label, description }) => (
+                <li class="flex bg-white justify-between gap-x-6 p-4 hover:bg-gray-50 cursor-pointer inset-px border-2 border-transparent hover:border-brand items-center text-left first:rounded-t-lg last:rounded-b-lg transition-all group">
+                  <div>
+                    <h3 class="font-semibold">{label}</h3>
+                    <p>{description}</p>
+                  </div>
+                  <svg
+                    class="size-6 flex-none text-transparent group-hover:text-brand"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    data-slot="icon"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </li>
+              ))
+            }
+          </ul>
+          <div class="slides">%Smartphone%</div>
+        </div>
       </section>
       <section>
-        <h2>Warum Yumkin wichtig ist!</h2>
-        <p>
-          Echte Geschichten, ehrliches Feedback und begeisterte Stimmen aus
-          unserer Community.
-        </p>
+        <header class="max-w-2xl mx-auto">
+          <h2 class="text-xl md:text-2xl lg:text-3xl mb-4">
+            Warum Yumkin wichtig ist!
+          </h2>
+          <p class="text-lg opacity-70">
+            Echte Geschichten, ehrliches Feedback und begeisterte Stimmen aus
+            unserer Community.
+          </p>
+        </header>
       </section>
       <section>
-        <h2>Immer up to date: Wissen, Tipps und mehr!</h2>
-        <p>
-          Entdecke spannende Neuigkeiten, Updates und Inspirationen rund um
-          Ernährung und unsere App.
-        </p>
+        <header class="max-w-2xl mx-auto">
+          <h2 class="text-xl md:text-2xl lg:text-3xl mb-4">
+            Immer up to date: Wissen, Tipps und mehr!
+          </h2>
+          <p class="text-lg opacity-70">
+            Entdecke spannende Neuigkeiten, Updates und Inspirationen rund um
+            Ernährung und unsere App.
+          </p>
+        </header>
         <div class="grid sm:grid-cols-2 lg:grid-cols-4">
           {
             posts.map((post) => (
