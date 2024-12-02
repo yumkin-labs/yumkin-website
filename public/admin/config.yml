@@ -3,7 +3,7 @@ backend:
   branch: main # Or the branch you want to use
 
 media_folder: "public/images/blog/uploads"
-public_folder: "public/images/blog/uploads"
+public_folder: "/images/blog/uploads"
 
 collections:
   - name: "blog" # Folder for blog posts
