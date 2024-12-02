@@ -8,7 +8,7 @@ description: Entdecke, wie du glutenfreie Mehlmischungen ganz einfach selbst
   hilfreichen Tipps wird das Backen ohne Gluten zum Kinderspiel!
 pubDate: Jul 15 2022
 updatedDate: 2024-12-02T23:36:00.000Z
-heroImage: /uploads/original-217c66b62c3ead41c73b7c5000aeab98.png
+heroImage: /uploads/yumkin-background.jpg
 ---
 
 Glutenfreie Mehle haben andere Bindungs- und Backeigenschaften als glutenhaltige Mehle. Das pure glutenfreie Mehl kann man also nicht einfach so als Ersatz verwenden für bspw. ein Weizenmehl.
