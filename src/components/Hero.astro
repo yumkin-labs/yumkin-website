@@ -1,0 +1,17 @@
+---
+const { title, description, heroSize = "none", heroImage } = Astro.props;
+---
+
+<div
+  class={`mb-8 absolute top-0 -z-10 px-6 mx-auto w-full bg-brand 
+    ${heroSize === "none" ? "h-0" : heroSize === "small" ? "h-[30vh]" : heroSize === "large" ? "h-[64vh]" : "h-[30vh]"}
+  `}
+  style={heroImage
+    ? `background-image: url(${heroImage}); background-size: cover; background-position: center;`
+    : ""}
+>
+  <div class="max-w-7xl px-6 mx-auto w-full h-auto">
+    <h1>{title}</h1>
+    <h2>{description}</h2>
+  </div>
+</div>

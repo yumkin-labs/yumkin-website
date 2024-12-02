@@ -18,7 +18,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
   <body>
     <Header />
     <main>
-      <article class="">
+      <article class="max-w-7xl mx-auto px-6">
         <div class="hero-image mb-8">
           {
             heroImage && (
@@ -32,8 +32,18 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
             )
           }
         </div>
-        <div class="mx-auto max-w-5xl px-6">
+        <div class="prose mx-auto">
           <div class="title">
+            <div class="date">
+              <FormattedDate date={pubDate} />
+              {
+                updatedDate && (
+                  <div class="last-updated-on">
+                    Last updated on <FormattedDate date={updatedDate} />
+                  </div>
+                )
+              }
+            </div>
             <h1>{title}</h1>
           </div>
           <slot />

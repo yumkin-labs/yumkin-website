@@ -1,57 +1,50 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
+import YumkinLogo from "./YumkinLogo.astro";
+import Hero from "../components/Hero.astro";
+
+const { heroSize = "none", title = "", description = "" } = Astro.props; // Default to "none" if no value is provided
 ---
 
-<header>
-  <nav>
-    <h2><a href={`${import.meta.env.BASE_URL}`}>{SITE_TITLE}</a></h2>
-    <div class="internal-links">
+<header
+  class={heroSize === "none"
+    ? ""
+    : heroSize === "small"
+      ? "pb-[26vh]"
+      : heroSize === "large"
+        ? "pb-[62vh]"
+        : ""}
+>
+  <nav class="flex justify-between py-8 px-6 max-w-7xl mx-auto">
+    <h2>
+      <a href={`${import.meta.env.BASE_URL}`}>
+        <!-- {SITE_TITLE} -->
+        <YumkinLogo
+          type={`${heroSize === "none" || !heroSize ? "brand" : "inverted"}`}
+        />
+      </a>
+    </h2>
+    <div
+      class={`flex gap-2 ${heroSize === "none" || !heroSize ? "text-brand" : "text-white"}`}
+    >
       <HeaderLink href={`${import.meta.env.BASE_URL}`}>Home</HeaderLink>
-      <HeaderLink href={`${import.meta.env.BASE_URL}blog`}>Blog</HeaderLink>
-      <HeaderLink href={`${import.meta.env.BASE_URL}about`}>About</HeaderLink>
+      <HeaderLink href={`${import.meta.env.BASE_URL}about`}
+        >Unternehmen</HeaderLink
+      >
+      <HeaderLink href={`${import.meta.env.BASE_URL}blog`}
+        >Neuigkeiten</HeaderLink
+      >
     </div>
-    <div></div>
+    <div>
+      <button>Login</button>
+      <button>Get the App</button>
+    </div>
   </nav>
+  {
+    heroSize !== "none" && (
+      <Hero heroSize={heroSize} title={title} description={description} />
+    )
+  }
+  <!-- Conditionally render the Hero component -->
 </header>
-<style>
-  header {
-    margin: 0;
-    padding: 0 1em;
-    background: white;
-    box-shadow: 0 2px 8px rgba(var(--black), 5%);
-  }
-  h2 {
-    margin: 0;
-    font-size: 1em;
-  }
-
-  h2 a,
-  h2 a.active {
-    text-decoration: none;
-  }
-  nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  nav a {
-    padding: 1em 0.5em;
-    color: var(--black);
-    border-bottom: 4px solid transparent;
-    text-decoration: none;
-  }
-  nav a.active {
-    text-decoration: none;
-    border-bottom-color: var(--accent);
-  }
-  .social-links,
-  .social-links a {
-    display: flex;
-  }
-  @media (max-width: 720px) {
-    .social-links {
-      display: none;
-    }
-  }
-</style>
