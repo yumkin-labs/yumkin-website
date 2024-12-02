@@ -25,11 +25,13 @@ jobs:
       run: |
         npm config delete registry
         npm config set registry https://registry.npmjs.org/ --global
+        npm config delete proxy
+        npm config delete https-proxy
         npm cache clean --force
-        
+
     # Install dependencies
     - name: Install dependencies
-      run: npm install
+      run: npm install --registry=https://registry.npmjs.org/
 
     # Build the Astro app
     - name: Build Astro app
