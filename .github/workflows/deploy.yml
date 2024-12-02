@@ -37,4 +37,4 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         protocol: ftps
         local-dir: dist/  # Astro's default output directory
-        server-dir: /public_html/  # Specify your remote folder
+        server-dir: /public_html/test/  # Specify your remote folder
