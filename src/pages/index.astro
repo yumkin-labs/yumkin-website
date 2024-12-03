@@ -62,8 +62,8 @@ const sliderContent = [
     />
     <main class="max-w-7xl mx-auto px-6 text-center space-y-24 pt-16">
       <section>
-        <header class="max-w-2xl mx-auto">
-          <h2 class="text-xl md:text-2xl lg:text-3xl mb-4">
+        <header class="max-w-2xl mx-auto mb-8">
+          <h2 class="text-xl md:text-2xl lg:text-3xl mb-4 font-semibold">
             Sag Tschüss zu komplizierter Rezeptsuche und unsicherem Einkaufen.
             Mit Yumkin ist Genuss einfacher als je zuvor!
           </h2>
@@ -106,8 +106,8 @@ const sliderContent = [
         </div>
       </section>
       <section>
-        <header class="max-w-2xl mx-auto">
-          <h2 class="text-xl md:text-2xl lg:text-3xl mb-4">
+        <header class="max-w-2xl mx-auto mb-8">
+          <h2 class="text-xl md:text-2xl lg:text-3xl mb-4 font-semibold">
             Warum Yumkin wichtig ist!
           </h2>
           <p class="text-lg opacity-70">
@@ -117,8 +117,8 @@ const sliderContent = [
         </header>
       </section>
       <section>
-        <header class="max-w-2xl mx-auto">
-          <h2 class="text-xl md:text-2xl lg:text-3xl mb-4">
+        <header class="max-w-2xl mx-auto mb-8">
+          <h2 class="text-xl md:text-2xl lg:text-3xl mb-4 font-semibold">
             Immer up to date: Wissen, Tipps und mehr!
           </h2>
           <p class="text-lg opacity-70">
@@ -126,7 +126,9 @@ const sliderContent = [
             Ernährung und unsere App.
           </p>
         </header>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4">
+        <div
+          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-left"
+        >
           {
             posts.map((post) => (
               <div>
