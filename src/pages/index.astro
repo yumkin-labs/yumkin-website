@@ -7,53 +7,25 @@ import {
   SITE_DESCRIPTION,
   HERO_TITLE,
   HERO_SUBTITLE,
+  SLIDER_CONTENT,
 } from "../consts";
 import { getCollection } from "astro:content";
-import FormattedDate from "../components/FormattedDate.astro";
 import HeroImage from "../../public/images/yumkin-hero3.jpg";
+import BlogTeaser from "../components/BlogTeaser.astro";
 
-const posts = (await getCollection("blog")).sort(
+const posts: BlogPost[] = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
-
-const sliderContent = [
-  {
-    id: "tab-1",
-    label: "Keine Sorgen mehr – wir machen Rezepte sicher für dich:",
-    description:
-      "Entdecke Rezepte aus unserer Datenbank die auf dich zugeschnitten sind oder füge deine eigenen hinzu. Yumkin passt Rezepte automatisch an, ohne mühsame Zutaten-Recherche.",
-    content: "../../public/images/yumkin-screenshot-1.jpg",
-  },
-  {
-    id: "tab-2",
-    label:
-      "Automatische Anpassung an deine Allergien und Ernährungspräferenzen.",
-    description:
-      "Entdecke Rezepte aus unserer Datenbank die auf dich zugeschnitten sind oder füge deine eigenen hinzu. Yumkin passt Rezepte automatisch an, ohne mühsame Zutaten-Recherche.",
-    content: "../../public/images/yumkin-screenshot-2.jpg",
-  },
-  {
-    id: "tab-3",
-    label: "Clever einkaufen",
-    description:
-      "Erstelle Einkaufslisten, scanne Etiketten und vermeidest unerwünschte Überraschungen im Supermarkt.",
-    content: "../../public/images/yumkin-screenshot-3.jpg",
-  },
-  {
-    id: "tab-4",
-    label: "Community-Integration:",
-    description:
-      "Profitiere von einer inspirierenden Community. Tauscht euch aus und lernt voneinander z.B. über Rezepte, Erfahrungen oder Tipps & Tricks.",
-    content: "../../public/images/yumkin-screenshot-4.jpg",
-  },
-];
 ---
 
 <html lang="de">
   <head>
-    <BaseHead title={SITE_DESCRIPTION} description={SITE_DESCRIPTION} />
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body class="bg-gray-50">
+  <body
+    class="bg-gray-50"
+    x-data={`{ selectedIndex: 0, SLIDER_CONTENT: ${JSON.stringify(SLIDER_CONTENT)} }`}
+  >
     <Header
       title={HERO_TITLE}
       description={HERO_SUBTITLE}
@@ -73,36 +45,63 @@ const sliderContent = [
             überhaupt noch essen?”
           </p>
         </header>
-        <div class="slider grid grid-cols-2 items-center my-8 p-6">
+
+        <div class="slider grid md:grid-cols-3 items-center my-8 p-6">
           <ul
             role="list"
             class="overflow-hidden shadow-sm ring-1 ring-gray-100 rounded-lg"
           >
-            {
-              sliderContent.map(({ label, description }) => (
-                <li class="flex bg-white justify-between gap-x-6 p-4 hover:bg-gray-50 cursor-pointer inset-px border-2 border-transparent hover:border-brand items-center text-left first:rounded-t-lg last:rounded-b-lg transition-all group">
-                  <div>
-                    <h3 class="font-semibold">{label}</h3>
-                    <p>{description}</p>
-                  </div>
-                  <svg
-                    class="size-6 flex-none text-transparent group-hover:text-brand"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
-                    data-slot="icon"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                </li>
-              ))
-            }
+            <template x-for="(item, index) in SLIDER_CONTENT" :key="index">
+              <li
+                x-bind:class="{
+                'flex bg-white justify-between gap-x-6 p-4 cursor-pointer inset-px border-2  hover:border-brand items-center text-left first:rounded-t-lg last:rounded-b-lg transition-all group': true,
+                  'bg-gray-50 border-brand': selectedIndex === index, 'border-transparent': selectedIndex !== index
+              }"
+                @click="selectedIndex = index"
+              >
+                <div>
+                  <h3 class="font-semibold" x-text="item.label"></h3>
+                  <!-- <p x-text="item.description"></p> -->
+                </div>
+                <svg
+                  class="size-6 flex-none text-transparent group-hover:text-brand"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  data-slot="icon"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </li>
+            </template>
           </ul>
-          <div class="slides">%Smartphone%</div>
+
+          <div class="slides w-full flex justify-center">
+            <template x-for="(item, index) in SLIDER_CONTENT" :key="index">
+              <div x-show="selectedIndex === index">
+                <img
+                  :src="item.content"
+                  :alt="item.label"
+                  class="max-h-[50vh] rounded-lg"
+                />
+              </div>
+            </template>
+          </div>
+
+          <!-- Slide Images -->
+          <div class="slides w-full flex justify-center">
+            <template x-for="(item, index) in SLIDER_CONTENT" :key="index">
+              <div
+                x-show="selectedIndex === index"
+                class="bg-white p-4 cursor-pointer inset-px rounded-lg"
+              >
+                <p x-text="item.description"></p>
+              </div>
+            </template>
+          </div>
         </div>
       </section>
       <section>
@@ -129,25 +128,7 @@ const sliderContent = [
         <div
           class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-left"
         >
-          {
-            posts.map((post) => (
-              <div>
-                <a href={`${import.meta.env.BASE_URL}blog/${post.slug}/`}>
-                  <img
-                    width={720}
-                    height={360}
-                    class=" rounded-lg mb-2"
-                    src={`${import.meta.env.BASE_URL}${post.data.heroImage}`}
-                    alt=""
-                  />
-                  <p class="date opacity-70 text-sm">
-                    <FormattedDate date={post.data.pubDate} />
-                  </p>
-                  <h4 class="title font-bold">{post.data.title}</h4>
-                </a>
-              </div>
-            ))
-          }
+          {posts.map((post: BlogPost) => <BlogTeaser post={post} />)}
         </div>
       </section>
     </main>
