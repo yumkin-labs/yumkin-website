@@ -1,0 +1,16 @@
+---
+import Page from "../layouts/Page.astro";
+import Accordion from "../components/Accordion.astro";
+import { getCollection } from "astro:content";
+const faqs = await getCollection("faq");
+---
+
+<Page
+  title="Häufige Fragen"
+  description="Alles, was du wissen musst – auf einen Blick!"
+  heroImage="/hero-about.jpg"
+>
+  <section class="accordion space-y-1">
+    {faqs.map((faq, index) => <Accordion faq={faq} index={index} />)}
+  </section>
+</Page>

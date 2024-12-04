@@ -1,0 +1,53 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+const { faq, index } = Astro.props;
+const { Content } = await faq.render();
+---
+
+<div
+  class="relative bg-white shadow-sm hover:shadow-md ring-2 ring-gray-100 hover:bg-brand/10 flex flex-col w-full rounded-md"
+>
+  <input type="checkbox" name={`faq-${index}`} id={`faq-${index}`} />
+  <label
+    for={`faq-${index}`}
+    class="tab__label flex gap-4 w-full hover:cursor-pointer p-4"
+  >
+    <span
+      class="icon-closed w-8 h-8 bg-brand/10 flex items-center justify-center"
+      ><span>&#8595;</span></span
+    >
+    <span
+      class="icon-opened w-8 h-8 bg-brand/10 flex items-center justify-center"
+      ><span>&#8593;</span></span
+    >
+    <div class="font-semibold text-md">{faq.data.title}</div>
+  </label>
+  <div class="tab__content px-4 pb-4 pl-16">
+    <p class="mb-2">{faq.data.description}</p>
+    <Content />
+  </div>
+</div>
+
+<style scoped>
+  input {
+    display: none;
+  }
+  .icon-opened {
+    display: none;
+  }
+  input:checked + .tab__label .icon-closed {
+    display: none;
+  }
+  input:checked + .tab__label .icon-opened {
+    display: flex;
+  }
+  div:has(input:checked) {
+    background-color: rgb(0 147 138 / 0.1);
+  }
+  .tab__content {
+    display: none;
+  }
+  input:checked + .tab__label + .tab__content {
+    display: block;
+  }
+</style>

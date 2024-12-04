@@ -18,9 +18,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
       heroSize="small"
     />
     <main>
-      <article class="max-w-7xl mx-auto px-6">
+      <div class="mx-auto max-w-7xl px-6 prose">
         <slot />
-      </article>
+      </div>
     </main>
     <Footer />
   </body>

@@ -57,10 +57,7 @@ const posts: BlogPost[] = (await getCollection("blog")).sort(
                 }"
                 @click="selectedIndex = index"
               >
-                <div>
-                  <h3 class="font-semibold" x-text="index"></h3>
-                  <h3 class="font-semibold" x-text="item.label"></h3>
-                </div>
+                <div><h3 class="font-semibold" x-text="item.label"></h3></div>
                 <svg
                   class="size-6 flex-none text-transparent group-hover:text-brand"
                   viewBox="0 0 20 20"
@@ -81,7 +78,7 @@ const posts: BlogPost[] = (await getCollection("blog")).sort(
               <div x-show="selectedIndex === index">
                 <img
                   :src="item.content"
-                  :alt="item.label"
+                  :alt="item.description"
                   class="max-h-[50vh] rounded-lg"
                 />
               </div>
