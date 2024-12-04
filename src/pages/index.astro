@@ -47,37 +47,34 @@ const posts: BlogPost[] = (await getCollection("blog")).sort(
         </header>
 
         <div class="slider grid md:grid-cols-3 items-center my-8 p-6">
-          <ul
-            role="list"
-            class="overflow-hidden shadow-sm ring-1 ring-gray-100 rounded-lg"
-          >
+          <div role="list" class="shadow-sm ring-1 ring-gray-100">
             <template x-for="(item, index) in SLIDER_CONTENT" :key="index">
-              <li
+              <div
+                class="flex bg-white justify-between gap-x-6 p-4 cursor-pointer border-2 hover:border-brand items-center text-left transition-all group first:rounded-t-lg first:bg-red-400 last:rounded-b-lg"
                 x-bind:class="{
-                'flex bg-white justify-between gap-x-6 p-4 cursor-pointer inset-px border-2  hover:border-brand items-center text-left first:rounded-t-lg last:rounded-b-lg transition-all group': true,
-                  'bg-gray-50 border-brand': selectedIndex === index, 'border-transparent': selectedIndex !== index
-              }"
+                  'bg-gray-50 border-brand': selectedIndex === index,
+                  'border-transparent': selectedIndex !== index
+                }"
                 @click="selectedIndex = index"
               >
                 <div>
+                  <h3 class="font-semibold" x-text="index"></h3>
                   <h3 class="font-semibold" x-text="item.label"></h3>
-                  <!-- <p x-text="item.description"></p> -->
                 </div>
                 <svg
                   class="size-6 flex-none text-transparent group-hover:text-brand"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                   aria-hidden="true"
-                  data-slot="icon"
                 >
                   <path
                     fill-rule="evenodd"
                     d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
                     clip-rule="evenodd"></path>
                 </svg>
-              </li>
+              </div>
             </template>
-          </ul>
+          </div>
 
           <div class="slides w-full flex justify-center">
             <template x-for="(item, index) in SLIDER_CONTENT" :key="index">
