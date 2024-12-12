@@ -6,6 +6,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import { getCollection } from "astro:content";
 import FormattedDate from "../../components/FormattedDate.astro";
 import BlogTeaser from "../../components/BlogTeaser.astro";
+import HeaderDetail from "../../components/HeaderDetail.astro";
 
 const posts: BlogPost[] = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -18,7 +19,7 @@ const posts: BlogPost[] = (await getCollection("blog")).sort(
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
-    <Header
+    <HeaderDetail
       title="Neuigkeiten"
       description="Immer up to date: Wissen, Tipps und mehr! Entdecke spannende Neuigkeiten, Updates und Inspirationen rund um Ernährung und unsere App."
       heroSize="small"

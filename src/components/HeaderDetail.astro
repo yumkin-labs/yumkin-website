@@ -1,0 +1,77 @@
+---
+import YumkinLogo from "./YumkinLogo.astro";
+import NavBar from "./NavBar.astro";
+
+const { heroSize = "none", heroImage, title, description } = Astro.props;
+---
+
+<header class="relative bg-brand" x-data="{ open: false }">
+  <nav
+    class="relative grid grid-cols-3 justify-between py-8 px-6 max-w-7xl mx-auto z-20"
+  >
+    <h2>
+      <a href={`${import.meta.env.BASE_URL}`}>
+        <YumkinLogo type="inverted" />
+      </a>
+    </h2>
+
+    <div
+      @click="open = !open"
+      class="flex md:hidden cursor-pointer text-2xl justify-end col-span-2"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6"
+        x-show="!open"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6"
+        x-show="open"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </div>
+
+    <div class="md:grid hidden justify-end col-span-2"><NavBar /></div>
+    <div
+      x-show="open"
+      class="col-span-3 md:hidden bg-white p-4 rounded-lg mt-4"
+    >
+      <NavBar />
+    </div>
+  </nav>
+
+  {
+    title && (
+      <div class="mb-8 relative z-20 mx-auto w-full flex items-end">
+        <div class="max-w-7xl py-12 mx-auto w-full h-auto text-white p-6">
+          <h1 class="min-w-[256px]">
+            <span class="text-3xl md:text-4xl lg:text-5xl font-semibold block mb-4 leading-normal">
+              {title}
+            </span>
+            <span class="text-lg md:text-xl lg:text-2xl opacity-70">
+              {description}
+            </span>
+          </h1>
+        </div>
+      </div>
+    )
+  }
+</header>

@@ -1,18 +1,18 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
-const { heroSize = "none" } = Astro.props;
+const { heroSize } = Astro.props;
 ---
 
 <div
-  class={`w-full justify-center flex flex-col md:flex-row gap-2 ${heroSize === "none" ? "text-brand" : "md:text-white"}`}
+  class={`w-full justify-center flex flex-col md:flex-row gap-2 items-center ${heroSize === "none" ? "text-brand" : "md:text-white"}`}
 >
   <HeaderLink href={`${import.meta.env.BASE_URL}`}>Home</HeaderLink>
   <HeaderLink href={`${import.meta.env.BASE_URL}about`}>Unternehmen</HeaderLink>
   <HeaderLink href={`${import.meta.env.BASE_URL}blog`}>Neuigkeiten</HeaderLink>
   <HeaderLink href={`${import.meta.env.BASE_URL}faq`}>Häufige Fragen</HeaderLink
   >
-</div>
-<div class="w-full flex justify-end">
-  <button>Login</button>
-  <button>Get the App</button>
+  <div class="">
+    <button>Login</button>
+    <button>Get the App</button>
+  </div>
 </div>

@@ -2,6 +2,7 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import HeaderDetail from "../components/HeaderDetail.astro";
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
@@ -12,7 +13,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
   </head>
 
   <body class="bg-gray-50">
-    <Header
+    <HeaderDetail
       title="Häufige Fragen"
       description="Immer up to date: Wissen, Tipps und mehr! Entdecke spannende Neuigkeiten, Updates und Inspirationen rund um Ernährung und unsere App."
       heroSize="small"
