@@ -2,9 +2,7 @@
 interface Props {
   type?: string;
 }
-const { type } = Astro.props;
-const fillColor =
-  type === "inverted" ? "white" : type === "brand" ? "green" : "white"; // Default to none if type is not recognized
+const { type } = Astro.props; // Default to none if type is not recognized
 const textClass =
   type === "inverted" ? "text-white" : type === "brand" ? "text-brand" : ""; // Add text classes based on type
 ---
