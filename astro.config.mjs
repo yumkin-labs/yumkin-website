@@ -15,7 +15,17 @@ export default defineConfig({
   // Only for FTP Push
   // base: "/test/",
   base: "/",
-  integrations: [mdx(), sitemap(), tailwind(), alpinejs()],
+  integrations: [
+    mdx(),
+    sitemap({
+      filter: (page) =>
+        page !== "https://yumkin.de/admin" &&
+        page !== "https://yumkin-website.netlify.com/admin",
+    }),
+    ,
+    tailwind(),
+    alpinejs(),
+  ],
   output: "static",
   trailingSlash: "ignore",
   adapter: netlify({
