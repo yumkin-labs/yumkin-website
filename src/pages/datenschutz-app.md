@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/Prose.astro
+layout: ../layouts/Blank.astro
 title: "Datenschutzerklärung"
 ---
 
