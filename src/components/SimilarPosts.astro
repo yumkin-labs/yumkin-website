@@ -9,9 +9,9 @@ const { currentPost } = Astro.props;
 const allPosts = await getCollection("blog");
 
 // Function to calculate tag similarity score
-function getSimilarityScore(postTags, otherTags) {
+function getSimilarityScore(postTags: any, otherTags: any) {
   if (!postTags || !otherTags) return 0;
-  return postTags.filter((tag) => otherTags.includes(tag)).length;
+  return postTags.filter((tag: any) => otherTags.includes(tag)).length;
 }
 
 // Filter and rank posts by similarity
