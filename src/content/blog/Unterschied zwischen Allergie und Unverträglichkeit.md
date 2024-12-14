@@ -6,10 +6,14 @@ description: Entdecke, wie du glutenfreie Mehlmischungen ganz einfach selbst
   auf eine glutenfreie Ernährung umsteigen möchten. Mit einfachen Zutaten und
   hilfreichen Tipps wird das Backen ohne Gluten zum Kinderspiel!
 pubDate: Jul 15 2022
-updatedDate: 2024-12-02T23:36:00.000Z
 heroImage: uploads/blog-placeholder-3.jpg
 tags:
-  - tag1
+  - Allergie
+  - Unverträglichkeit
+  - Gesundheit
+  - Ernährung
+  - Immunsystem
+  - Medizin
 ---
 
 Dieses Thema ist besonders deshalb interessant, weil für viele Menschen genau dieser Unterschied nicht klar ist und Manche diese beiden Themen sogar miteinander gleich setzen. Es ist jedoch ein eklatanter Unterschied, ob es sich um eine Allergie oder eine Unverträglichkeit (oder auch genannt Intoleranz) handelt. Soviel gleich vorweg: Es ist keinesfalls so, dass eine Unverträglichkeit "harmloser" ist als eine Allergie!

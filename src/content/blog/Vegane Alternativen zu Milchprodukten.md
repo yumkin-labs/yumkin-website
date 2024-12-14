@@ -6,10 +6,18 @@ description: Entdecke, wie du glutenfreie Mehlmischungen ganz einfach selbst
   auf eine glutenfreie Ernährung umsteigen möchten. Mit einfachen Zutaten und
   hilfreichen Tipps wird das Backen ohne Gluten zum Kinderspiel!
 pubDate: Jul 15 2022
-updatedDate: 2024-12-02T23:36:00.000Z
 heroImage: uploads/blog-placeholder-2.jpg
 tags:
-  - tag3
+  - Vegan
+  - Milchalternativen
+  - Allergien
+  - Unverträglichkeiten
+  - Pflanzliche Ernährung
+  - Milchersatz
+  - Milchfrei
+  - Ernährung
+  - Substitutionen
+  - Lebensmittel
 ---
 
 Mittlerweile gibt es eine riesige Auswahl an veganen Alternativen zu klassischen Milchprodukten. Das ist besonders deshalb so großartig, weil solche Alternativen nicht nur für Veganer interessant sind, sondern auch für Menschen wie mich, deren Immunsystem auf **Milcheiweiß** (und eben nicht auf den Milchzucker **Lactose**) reagiert. Das heißt, hier kann man sich nicht behelfen mit lactosefreien Milchprodukten, sondern man muss gänzlich auf sie verzichten.
