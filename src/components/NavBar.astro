@@ -1,4 +1,5 @@
 ---
+import ButtonInverted from "./ButtonInverted.astro";
 import HeaderLink from "./HeaderLink.astro";
 const { heroSize } = Astro.props;
 ---
@@ -11,8 +12,8 @@ const { heroSize } = Astro.props;
   <HeaderLink href={`${import.meta.env.BASE_URL}blog`}>Neuigkeiten</HeaderLink>
   <HeaderLink href={`${import.meta.env.BASE_URL}faq`}>Häufige Fragen</HeaderLink
   >
-  <div class="">
-    <HeaderLink href="https://app.yumkin.de">Zur App</HeaderLink>
-    <button>Get the App</button>
+  <div class="flex gap-2">
+    <ButtonInverted href="https://app.yumkin.de">Zur App</ButtonInverted>
+    <ButtonInverted>Get the App</ButtonInverted>
   </div>
 </div>

@@ -1,0 +1,45 @@
+---
+import { getCollection } from "astro:content";
+
+// Props: `currentPost` contains the tags of the current post
+export const prerender = true;
+const { currentPost } = Astro.props;
+
+// Get all posts from the blog collection
+const allPosts = await getCollection("blog");
+
+// Function to calculate tag similarity score
+function getSimilarityScore(postTags, otherTags) {
+  if (!postTags || !otherTags) return 0;
+  return postTags.filter((tag) => otherTags.includes(tag)).length;
+}
+
+// Filter and rank posts by similarity
+const similarPosts = allPosts
+  .filter((post) => post.id !== currentPost.id) // Exclude the current post
+  .map((post) => ({
+    ...post,
+    similarityScore: getSimilarityScore(currentPost.tags, post.data.tags),
+  }))
+  .filter((post) => post.similarityScore > 0) // Exclude posts with no shared tags
+  .sort((a, b) => b.similarityScore - a.similarityScore) // Sort by similarity
+  .slice(0, 3); // Get top 3 similar posts
+---
+
+<section>
+  <h2>Similar Posts</h2>
+  {
+    similarPosts.length > 0 ? (
+      <ul>
+        {similarPosts.map((post) => (
+          <li>
+            <a href={post.slug}>{post.data.title}</a> - Shared tags:{" "}
+            {post.similarityScore}
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <p>No similar posts found.</p>
+    )
+  }
+</section>
