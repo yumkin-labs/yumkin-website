@@ -9,6 +9,10 @@ description: Entdecke, wie du glutenfreie Mehlmischungen ganz einfach selbst
 pubDate: Jul 15 2022
 updatedDate: 2024-12-02T23:36:00.000Z
 heroImage: uploads/blog-glutenfreie-mehlmischungen-daumenregel.jpg
+tags:
+  - tag1
+  - tag2
+  - tag3
 ---
 
 Glutenfreie Mehle haben andere Bindungs- und Backeigenschaften als glutenhaltige Mehle. Das pure glutenfreie Mehl kann man also nicht einfach so als Ersatz verwenden für bspw. ein Weizenmehl.

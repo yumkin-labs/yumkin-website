@@ -8,6 +8,8 @@ description: Entdecke, wie du glutenfreie Mehlmischungen ganz einfach selbst
 pubDate: Jul 15 2022
 updatedDate: 2024-12-02T23:36:00.000Z
 heroImage: uploads/blog-placeholder-3.jpg
+tags:
+  - tag1
 ---
 
 Dieses Thema ist besonders deshalb interessant, weil für viele Menschen genau dieser Unterschied nicht klar ist und Manche diese beiden Themen sogar miteinander gleich setzen. Es ist jedoch ein eklatanter Unterschied, ob es sich um eine Allergie oder eine Unverträglichkeit (oder auch genannt Intoleranz) handelt. Soviel gleich vorweg: Es ist keinesfalls so, dass eine Unverträglichkeit "harmloser" ist als eine Allergie!

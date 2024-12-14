@@ -13,6 +13,7 @@ import { getCollection } from "astro:content";
 import HeroImage from "../../public/images/yumkin-hero3.jpg";
 import BlogTeaser from "../components/BlogTeaser.astro";
 
+const quotes = await getCollection("quotes");
 const posts: BlogPost[] = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
@@ -23,7 +24,6 @@ const posts: BlogPost[] = (await getCollection("blog")).sort(
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body
-    class="bg-gray-50"
     x-data={`{ selectedIndex: 0, SLIDER_CONTENT: ${JSON.stringify(SLIDER_CONTENT)} }`}
   >
     <Header
@@ -108,6 +108,20 @@ const posts: BlogPost[] = (await getCollection("blog")).sort(
             unserer Community.
           </p>
         </header>
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 text-left"
+        >
+          {
+            quotes.map((quote) => (
+              <>
+                <div class="bg-gray-50 border border-gray-100 p-4 rounded-lg">
+                  <div class="text-wrap">{quote.body}</div>
+                  <p class="text-xs opacity-70 pt-8">{quote.data.author}</p>
+                </div>
+              </>
+            ))
+          }
+        </div>
       </section>
       <section>
         <header class="max-w-2xl mx-auto mb-8">
@@ -120,7 +134,7 @@ const posts: BlogPost[] = (await getCollection("blog")).sort(
           </p>
         </header>
         <div
-          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-left"
+          class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 text-left"
         >
           {posts.map((post: BlogPost) => <BlogTeaser post={post} />)}
         </div>

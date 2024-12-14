@@ -8,6 +8,8 @@ description: Entdecke, wie du glutenfreie Mehlmischungen ganz einfach selbst
 pubDate: Jul 15 2022
 updatedDate: 2024-12-02T23:36:00.000Z
 heroImage: uploads/blog-placeholder-1.jpg
+tags:
+  - tag2
 ---
 
 Mittlerweile gibt es viele Produkte, die damit werben, "zuckerfrei" oder "ohne zugesetzten Zucker" zu sein. Was man dabei unbedingt wissen sollte: Diese Aussage bezieht sich nur auf Haushaltszucker (Saccharose). Es darf also jedes Lebensmittel als "zuckerfrei" deklariert werden, solange kein Haushaltszucker zugesetzt ist! Schaut man sich die Zutatenliste genau an, werden andere Zuckerarten wie Fructose oder Glucose, Süßungsmittel oder Fruchtkonzentrate eingesetzt, um den klassischen Industriezucker zu ersetzen. Wirklich zuckerfrei ist das nicht - und das kann es auch gar nicht sein. Etwas, das süß schmecken soll, muss in irgendeiner Weise Zucker oder ein Süßungsmittel enthalten. Alles Andere wäre Zauberei.
