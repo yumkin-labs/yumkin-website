@@ -16,7 +16,9 @@ function getSimilarityScore(postTags: any, otherTags: any) {
 
 // Filter and rank posts by similarity
 const similarPosts = allPosts
-  .filter((post) => post.id !== currentPost.id) // Exclude the current post
+  // .filter((post) => post.id !== currentPost.id) // Exclude the current post
+  // .filter((post) => post.data.title !== currentPost.data.title)
+  .filter((post) => post.slug !== currentPost.slug)
   .map((post) => ({
     ...post,
     similarityScore: getSimilarityScore(currentPost.tags, post.data.tags),
