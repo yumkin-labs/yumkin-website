@@ -5,9 +5,9 @@ import NavBar from "./NavBar.astro";
 const { title, description } = Astro.props;
 ---
 
-<header class="relative bg-brand" x-data="{ open: false }">
+<header class="relative bg-brand h-auto" x-data="{ open: false }">
   <nav
-    class="relative grid grid-cols-3 justify-between py-8 px-6 max-w-7xl mx-auto z-20"
+    class="relative grid grid-cols-3 justify-between p-6 max-w-7xl mx-auto z-50"
   >
     <h2>
       <a href={`${import.meta.env.BASE_URL}`}>
@@ -17,7 +17,7 @@ const { title, description } = Astro.props;
 
     <div
       @click="open = !open"
-      class="flex md:hidden cursor-pointer text-2xl justify-end col-span-2"
+      class="flex md:hidden cursor-pointer text-2xl justify-end col-span-2 text-white"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -52,8 +52,23 @@ const { title, description } = Astro.props;
     <div class="md:grid hidden justify-end col-span-2"><NavBar /></div>
     <div
       x-show="open"
-      class="col-span-3 md:hidden bg-white p-4 rounded-lg mt-4"
+      class="flex flex-col items-end col-span-3 md:hidden bg-white p-6 absolute left-0 top-0 w-full h-screen z-50"
     >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6"
+        @click="open = !open"
+        x-show="open"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
       <NavBar />
     </div>
   </nav>

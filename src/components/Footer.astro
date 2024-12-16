@@ -5,9 +5,11 @@ import ButtonInverted from "./ButtonInverted.astro";
 ---
 
 <footer class="bg-brand text-white mt-16">
-  <div class="px-6 py-6 max-w-7xl mx-auto flex justify-between">
+  <div
+    class="px-6 py-6 max-w-7xl mx-auto flex flex-col sm:flex-row items-start justify-between"
+  >
     <p>&copy; {today.getFullYear()} Yumkin. All rights reserved.</p>
-    <div class="flex gap-2">
+    <div class="flex gap-2 mb-4">
       <HeaderLink href={`${import.meta.env.BASE_URL}datenschutz`}
         >Datenschutz</HeaderLink
       >
