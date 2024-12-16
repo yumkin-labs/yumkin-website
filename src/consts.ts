@@ -4,9 +4,10 @@
 export const SITE_TITLE = "Yumkin";
 export const SITE_DESCRIPTION =
   "Endlich Freiheit & Genuss beim Essen – Deine indivualisierte App für Lebensmittelunverträglichkeiten und -allergien.";
-export const HERO_TITLE = "Endlich Freiheit & Genuss beim Essen.";
+export const HERO_TITLE =
+  "Yumkin – der digitale Alltagshelfer für barrierefreien Genuss";
 export const HERO_SUBTITLE =
-  "Deine indivualisierte App für Lebensmittelunverträglichkeiten und -allergien.";
+  "Was kann ich jetzt überhaupt noch essen? Und wie bereite ich mir damit etwas Leckeres zu? Deine indivualisierte App für Lebensmittelunverträglichkeiten und -allergien.";
 
 export const SLIDER_CONTENT: SliderContentItem[] = [
   {

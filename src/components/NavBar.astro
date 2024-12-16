@@ -8,8 +8,9 @@ const { heroSize } = Astro.props;
   class={`w-full justify-center flex flex-col md:flex-row gap-2 items-center ${heroSize === "none" ? "text-brand" : "md:text-white"}`}
 >
   <HeaderLink href={`${import.meta.env.BASE_URL}`}>Home</HeaderLink>
-  <HeaderLink href={`${import.meta.env.BASE_URL}about`}>Unternehmen</HeaderLink>
-  <HeaderLink href={`${import.meta.env.BASE_URL}blog`}>Neuigkeiten</HeaderLink>
+  <HeaderLink href={`${import.meta.env.BASE_URL}about`}>Über uns</HeaderLink>
+  <HeaderLink href={`${import.meta.env.BASE_URL}blog`}>Wissenswertes</HeaderLink
+  >
   <HeaderLink href={`${import.meta.env.BASE_URL}faq`}>Häufige Fragen</HeaderLink
   >
   <div class="flex gap-2">

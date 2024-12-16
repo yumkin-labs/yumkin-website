@@ -36,13 +36,12 @@ const posts: BlogPost[] = (await getCollection("blog")).sort(
       <section>
         <header class="max-w-2xl mx-auto mb-8">
           <h2 class="text-xl md:text-2xl lg:text-3xl mb-4 font-semibold">
-            Sag Tschüss zu komplizierter Rezeptsuche und unsicherem Einkaufen.
-            Mit Yumkin ist Genuss einfacher als je zuvor!
+            Endlich wieder Genuss und Spaß beim Essen.
           </h2>
           <p class="text-lg opacity-70">
-            Eine Unverträglichkeit oder Allergie ist diagnostiziert und man ist
-            im Alltag überfordert mit der Frage: „Was kann ich denn jetzt
-            überhaupt noch essen?”
+            Sag tschüss zu komplizierter Rezeptsuche. Wir helfen mit der
+            kulinarischen Alltagsplanung bei Lebensmittelunverträglichkeiten
+            oder -Allergien.
           </p>
         </header>
 
@@ -109,7 +108,7 @@ const posts: BlogPost[] = (await getCollection("blog")).sort(
           </p>
         </header>
         <div
-          class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 text-left"
+          class="grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 text-left"
         >
           {
             quotes.map((quote) => (
@@ -126,15 +125,15 @@ const posts: BlogPost[] = (await getCollection("blog")).sort(
       <section>
         <header class="max-w-2xl mx-auto mb-8">
           <h2 class="text-xl md:text-2xl lg:text-3xl mb-4 font-semibold">
-            Immer up to date: Wissen, Tipps und mehr!
+            Immer up to date: Wissenswertes, Tipps und Tricks!
           </h2>
           <p class="text-lg opacity-70">
-            Entdecke spannende Neuigkeiten, Updates und Inspirationen rund um
-            Ernährung und unsere App.
+            Entdecke Wissenswertes, Updates und Inspirationen rund um Ernährung
+            und unsere App.
           </p>
         </header>
         <div
-          class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 text-left"
+          class="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 text-left"
         >
           {posts.map((post: BlogPost) => <BlogTeaser post={post} />)}
         </div>
