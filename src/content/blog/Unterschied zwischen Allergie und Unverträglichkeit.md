@@ -7,7 +7,7 @@ description: Entdecke, wie du glutenfreie Mehlmischungen ganz einfach selbst
   hilfreichen Tipps wird das Backen ohne Gluten zum Kinderspiel!
 pubDate: Jul 15 2022
 heroImage: uploads/Unterschied-zwischen-Allergie-und-Unverträglichkeit.jpg
-category: "Gesundheit"
+category: Gesundheit
 tags:
   - Allergie
   - Unverträglichkeit

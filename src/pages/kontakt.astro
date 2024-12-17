@@ -86,9 +86,8 @@ import Page from "../layouts/Page.astro";
               </svg>
             </dt>
             <dd>
-              <a
-                class="hover:text-gray-900"
-                href="mailto:anfrage@emeli-fuchs.de">anfrage@emeli-fuchs.de</a
+              <a class="hover:text-gray-900" href="mailto:info@yumkin.de"
+                >info@yumkin.de</a
               >
             </dd>
           </div>
@@ -98,7 +97,7 @@ import Page from "../layouts/Page.astro";
     <form
       name="sample-kontakt-form"
       class="p-6 lg:p-8 bg-white border border-gray-200 rounded-lg"
-      netlify
+      {...{ netlify: true } as any}
     >
       <div class="">
         <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">

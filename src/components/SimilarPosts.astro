@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import BlogTeaser from "./BlogTeaser.astro";
 
 // Props: `currentPost` contains the tags of the current post
 export const prerender = true;
@@ -17,8 +18,8 @@ function getSimilarityScore(postTags: any, otherTags: any) {
 // Filter and rank posts by similarity
 const similarPosts = allPosts
   // .filter((post) => post.id !== currentPost.id) // Exclude the current post
-  // .filter((post) => post.data.title !== currentPost.data.title)
-  .filter((post) => post.slug !== currentPost.slug)
+  .filter((post) => post.data.title !== currentPost.title)
+  // .filter((post) => post.slug !== currentPost.slug)
   .map((post) => ({
     ...post,
     similarityScore: getSimilarityScore(currentPost.tags, post.data.tags),
@@ -28,18 +29,17 @@ const similarPosts = allPosts
   .slice(0, 3); // Get top 3 similar posts
 ---
 
-<section>
-  <h2>Similar Posts</h2>
+<section class="mx-auto max-w-lg md:max-w-3xl lg:max-w-5xl px-6 mt-32">
+  <h2 class="text-lg/8 font-semibold text-gray-900 mb-8">
+    Das könnte dich auch interessieren
+  </h2>
   {
     similarPosts.length > 0 ? (
-      <ul>
+      <div class="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 text-left">
         {similarPosts.map((post) => (
-          <li>
-            <a href={post.slug}>{post.data.title}</a> - Shared tags:{" "}
-            {post.similarityScore}
-          </li>
+          <BlogTeaser post={post} />
         ))}
-      </ul>
+      </div>
     ) : (
       <p>No similar posts found.</p>
     )
