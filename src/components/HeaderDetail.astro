@@ -75,16 +75,14 @@ const { title, description } = Astro.props;
 
   {
     title && (
-      <div class="mb-8 relative z-20 mx-auto w-full flex items-end">
-        <div class="max-w-7xl py-12 mx-auto w-full h-auto text-white p-6">
-          <h1 class="min-w-[256px]">
-            <span class="text-3xl md:text-4xl lg:text-5xl font-semibold block mb-4 leading-normal">
-              {title}
-            </span>
-            <span class="text-lg md:text-xl lg:text-2xl opacity-70">
-              {description}
-            </span>
-          </h1>
+      <div class=" bg-white px-6 py-16 sm:py-24 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <h2 class="mt-2 text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-gray-900">
+            {title}
+          </h2>
+          <p class="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
+            {description}
+          </p>
         </div>
       </div>
     )

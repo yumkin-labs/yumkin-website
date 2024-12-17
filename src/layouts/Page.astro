@@ -12,11 +12,7 @@ const { title, description } = Astro.props;
   </head>
 
   <body class="bg-gray-50">
-    <HeaderDetail
-      title="Häufige Fragen"
-      description="Immer up to date: Wissen, Tipps und mehr! Entdecke spannende Neuigkeiten, Updates und Inspirationen rund um Ernährung und unsere App."
-      heroSize="small"
-    />
+    <HeaderDetail title={title} description={description} />
     <main>
       <article class="max-w-7xl mx-auto px-6">
         <slot />
