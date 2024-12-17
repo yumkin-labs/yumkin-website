@@ -82,27 +82,14 @@ jobs:
     #  url: ${{ steps.deployment.outputs.page_url }}
     needs: build
     runs-on: ubuntu-latest
-    name: Deploy
+    name: 🚀 Deploy
     steps:
-      - name: FTP Deployment
-        uses: airvzxf/ftp-deployment-action@latest
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: www75.your-server.de
-          user: yumkin_1
+          username: yumkin_1
+          # password: ${{ secrets.ftp_password }}
           password: mVDYGd2vNiXC5Vxe
-          local_dir: ${{ env.BUILD_PATH }}/dist
-          remote_dir: /public_html/staging/
-          # Delete all the files inside of the remote directory.
-          delete: false
-          ftp_ssl_allow: true 
-#  deploy:
-#    environment:
-#      name: github-pages
-#      url: ${{ steps.deployment.outputs.page_url }}
-#    needs: build
-#    runs-on: ubuntu-latest
-#    name: Deploy
-#    steps:
-#      - name: Deploy to GitHub Pages
-#        id: deployment
-#        uses: actions/deploy-pages@v4
+          local-dir: ${{ env.BUILD_PATH }}/dist
+          server-dir: /public_html/staging/
