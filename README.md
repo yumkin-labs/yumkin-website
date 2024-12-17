@@ -37,3 +37,19 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+
+## Docker Dev Environment
+
+```bash
+# this command opens a shell in node docker container to run the 
+# npm commands without installing node on your machine
+docker run --rm -it -v $(pwd):/usr/src/app -p 4321:4321 -w /usr/src/app node:18-alpine /bin/sh
+
+## run this command inside the docker container to start the dev server
+npx astro dev --host
+
+## build the site to the directory dist/
+docker run --rm -it -v $(pwd):/usr/src/app -p 4321:4321 -w /usr/src/app node:18-alpine npm run build
+
+```
