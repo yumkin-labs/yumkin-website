@@ -1,3 +1,8 @@
+/* Move imports to the top */
+@import "/fonts/inter/inter.css";
+@import "/fonts/montserrat/montserrat.css";
+
+/* Tailwind directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
