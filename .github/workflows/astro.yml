@@ -20,9 +20,9 @@ permissions:
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+#concurrency:
+# group: "pages"
+#  cancel-in-progress: false
 
 env:
   BUILD_PATH: "." # default value when not using subfolders
@@ -60,9 +60,9 @@ jobs:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
           cache-dependency-path: ${{ env.BUILD_PATH }}/${{ steps.detect-package-manager.outputs.lockfile }}
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
+      #- name: Setup Pages
+      #  id: pages
+      #  uses: actions/configure-pages@v5
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
         working-directory: ${{ env.BUILD_PATH }}
@@ -77,10 +77,9 @@ jobs:
         with:
           path: ${{ env.BUILD_PATH }}/dist
   deploy:
-  
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    #environment:
+    #  name: ftp-deployment
+    #  url: ${{ steps.deployment.outputs.page_url }}
     needs: build
     runs-on: ubuntu-latest
     name: Deploy
