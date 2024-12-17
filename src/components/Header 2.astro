@@ -1,0 +1,97 @@
+---
+import YumkinLogo from "./YumkinLogo.astro";
+import NavBar from "./NavBar.astro";
+
+const {
+  heroSize = "none",
+  heroImage = "",
+  title = "",
+  description = "",
+} = Astro.props;
+---
+
+<header
+  class={`relative ${heroSize !== "none" ? "bg-brand" : ""}`}
+  style={heroImage.src
+    ? `background-image: url(${heroImage.src}); background-size: cover; background-position: center;`
+    : ""}
+     x-data="{ open: false }"
+>
+{
+    heroSize !== "none" && (
+  <div class={`absolute inset-0 bg-black opacity-50 z-20`}></div>
+  <div class={`absolute inset-0 bg-brand opacity-50 z-20`}></div>
+  <div
+    class={`absolute inset-0 from-brand bg-gradient-to-tr to-secondary opacity-50 z-10 ${heroSize !== "none" ? "bg-brand" : ""}`}
+  >
+  </div>
+      )
+    }
+
+  <nav class="relative grid grid-cols-3 justify-between p-6 max-w-7xl mx-auto z-20">
+    <h2>
+      <a href={`${import.meta.env.BASE_URL}`}>
+        <YumkinLogo type={heroSize === "none" ? "brand" : "inverted"} />
+      </a>
+    </h2>
+
+    <div @click="open = !open" class="flex md:hidden cursor-pointer text-2xl justify-end col-span-2">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6"
+        x-show="!open"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6"
+        x-show="open"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </div>
+
+    <div class="md:grid hidden justify-end col-span-2"><NavBar heroSize={heroSize} /></div>
+    <div x-show="open" class="col-span-3 md:hidden bg-white p-4 rounded-lg mt-4"><NavBar heroSize={heroSize} /></div>
+  </nav>
+
+  {
+    heroSize !== "none" && (
+      <div
+        class={`mb-8 relative z-20 mx-auto w-full flex items-end ${
+          heroSize === "small"
+            ? "h-[30vh]"
+            : heroSize === "large"
+              ? "h-[70vh]"
+              : "h-[30vh]"
+        }`}
+      >
+        <div class="max-w-7xl py-12 mx-auto w-full h-auto text-white p-6">
+          <h1 class="md:max-w-[60vw] min-w-[256px]">
+            <span class="text-3xl md:text-4xl lg:text-5xl font-semibold block mb-4">
+              {title}
+            </span>
+            <span class="text-lg md:text-xl lg:text-2xl opacity-70">
+              {description}
+            </span>
+          </h1>
+        </div>
+      </div>
+    )
+  }
+</header>

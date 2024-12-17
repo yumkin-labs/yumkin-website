@@ -8,6 +8,7 @@ description: Entdecke, wie du glutenfreie Mehlmischungen ganz einfach selbst
   hilfreichen Tipps wird das Backen ohne Gluten zum Kinderspiel!
 pubDate: Jul 15 2022
 heroImage: uploads/blog-glutenfreie-mehlmischungen-daumenregel.jpg
+category: "Wissenswertes rund um Ernährung"
 tags:
   - Glutenfrei
   - Backen

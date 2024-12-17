@@ -9,6 +9,20 @@ import HeaderDetail from "../../components/HeaderDetail.astro";
 const posts: BlogPost[] = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
+
+const postsByCategory = posts.reduce<Record<string, BlogPost[]>>(
+  (acc, post) => {
+    const category = post.data.category; // Assume every post has a valid category
+    if (!acc[category]) {
+      acc[category] = [];
+    }
+    acc[category].push(post);
+    return acc;
+  },
+  {}
+);
+
+console.log(postsByCategory);
 ---
 
 <!doctype html>
@@ -18,15 +32,26 @@ const posts: BlogPost[] = (await getCollection("blog")).sort(
   </head>
   <body>
     <HeaderDetail
-      title="Neuigkeiten"
-      description="Immer up to date: Wissen, Tipps und mehr! Entdecke spannende Neuigkeiten, Updates und Inspirationen rund um Ernährung und unsere App."
+      title="Wissenswertes"
+      description="Immer up to date: Wissen, Tipps und Tricks! Entdecke Wissenswertes, Updates und Inspirationen rund um Ernährung und unsere App."
     />
     <main>
       <section class="max-w-7xl mx-auto px-6">
-        <div
-          class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 text-left"
-        >
-          {posts.map((post: BlogPost) => <BlogTeaser post={post} />)}
+        <div class="categories-container">
+          {
+            Object.entries(postsByCategory).map(([category, posts]) => (
+              <div id={category} class="category-group">
+                <h2 class="category-title text-xl text-center font-semibold text-gray-900 mb-8">
+                  {category}
+                </h2>
+                <div class="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 text-left">
+                  {posts.map((post: BlogPost) => (
+                    <BlogTeaser key={post.data.title} post={post} />
+                  ))}
+                </div>
+              </div>
+            ))
+          }
         </div>
       </section>
     </main>

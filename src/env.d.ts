@@ -7,6 +7,7 @@ interface BlogPost {
     description: string;
     pubDate: Date;
     updatedDate?: Date;
+    category: string;
     tags?: string[];
     heroImage?: string;
   };

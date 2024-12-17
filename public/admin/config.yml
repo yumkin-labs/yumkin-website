@@ -18,6 +18,7 @@ collections:
       - { label: "Publish Date", name: "pubDate", widget: "datetime" }
       - { label: "Updated Date", name: "updatedDate", widget: "datetime", required: false }
       - { label: "Hero Image", name: "heroImage", widget: "image", required: false }        
+      - { label: "Category", name: "category", widget: "select", options: ["Wissenswertes rund um Ernährung", "Gesundheit", "Alltagsbewältigung", "Produkttests"] }
       - { label: "Tags", name: "tags", widget: "list", allow_add: true, default: ["news"]}            
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "faq" # Folder for blog posts

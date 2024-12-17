@@ -1,41 +1,25 @@
 ---
 import YumkinLogo from "./YumkinLogo.astro";
 import NavBar from "./NavBar.astro";
+import { Image } from "astro:assets";
 
-const {
-  heroSize = "none",
-  heroImage = "",
-  title = "",
-  description = "",
-} = Astro.props;
+const { heroImage, title, description } = Astro.props;
 ---
 
-<header
-  class={`relative ${heroSize !== "none" ? "bg-brand" : ""}`}
-  style={heroImage.src
-    ? `background-image: url(${heroImage.src}); background-size: cover; background-position: center;`
-    : ""}
-     x-data="{ open: false }"
->
-{
-    heroSize !== "none" && (
-  <div class={`absolute inset-0 bg-black opacity-50 z-20`}></div>
-  <div class={`absolute inset-0 bg-brand opacity-50 z-20`}></div>
-  <div
-    class={`absolute inset-0 from-brand bg-gradient-to-tr to-secondary opacity-50 z-10 ${heroSize !== "none" ? "bg-brand" : ""}`}
+<header class="relative" x-data="{ open: false }">
+  <nav
+    class="relative grid grid-cols-3 justify-between p-6 max-w-7xl mx-auto z-20"
   >
-  </div>
-      )
-    }
-
-  <nav class="relative grid grid-cols-3 justify-between p-6 max-w-7xl mx-auto z-20">
     <h2>
       <a href={`${import.meta.env.BASE_URL}`}>
-        <YumkinLogo type={heroSize === "none" ? "brand" : "inverted"} />
+        <YumkinLogo type="inverted" />
       </a>
     </h2>
 
-    <div @click="open = !open" class="flex md:hidden cursor-pointer text-2xl justify-end col-span-2">
+    <div
+      @click="open = !open"
+      class="flex md:hidden cursor-pointer text-2xl justify-end col-span-2"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -66,32 +50,54 @@ const {
       </svg>
     </div>
 
-    <div class="md:grid hidden justify-end col-span-2"><NavBar heroSize={heroSize} /></div>
-    <div x-show="open" class="col-span-3 md:hidden bg-white p-4 rounded-lg mt-4"><NavBar heroSize={heroSize} /></div>
+    <div class="md:grid hidden justify-end col-span-2">
+      <NavBar />
+    </div>
+    <div
+      x-show="open"
+      class="col-span-3 md:hidden bg-white p-4 rounded-lg mt-4"
+    >
+      <NavBar />
+    </div>
   </nav>
 
-  {
-    heroSize !== "none" && (
-      <div
-        class={`mb-8 relative z-20 mx-auto w-full flex items-end ${
-          heroSize === "small"
-            ? "h-[30vh]"
-            : heroSize === "large"
-              ? "h-[70vh]"
-              : "h-[30vh]"
-        }`}
-      >
-        <div class="max-w-7xl py-12 mx-auto w-full h-auto text-white p-6">
-          <h1 class="max-w-[60vw] min-w-[256px]">
-            <span class="text-3xl md:text-4xl lg:text-5xl font-semibold block mb-4">
-              {title}
-            </span>
-            <span class="text-lg md:text-xl lg:text-2xl opacity-70">
-              {description}
-            </span>
+  <div class="isolate overflow-hidden pt-14 z-10">
+    <div class="relative mx-auto max-w-7xl px-6 lg:px-8 z-50">
+      <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <div class="text-center text-white">
+          <h1
+            class="text-balance text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight"
+          >
+            {title}
           </h1>
+          <p
+            class="mt-8 text-pretty text-lg font-medium opacity-70 sm:text-xl/8"
+          >
+            {description}
+          </p>
+          <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a
+              href="/kontakt"
+              class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-brand shadow-sm hover:ring-2 ring-white ring-offset-2"
+              >Auf die Warteliste</a
+            >
+            <a href="/about" class="text-sm/6 font-semibold text-white"
+              >Über Yumkin <span aria-hidden="true">→</span></a
+            >
+          </div>
         </div>
       </div>
-    )
-  }
+    </div>
+    <div class="absolute inset-0 bg-black opacity-50 z-20"></div>
+    <div class="absolute inset-0 bg-brand opacity-50 z-20"></div>
+    <div class="absolute inset-0 from-brand bg-gradient-to-tr to-secondary">
+    </div>
+    <Image
+      class="absolute inset-0 z-20 size-full object-cover opacity-10"
+      src={heroImage}
+      alt=""
+      width={1000}
+      height={800}
+    />
+  </div>
 </header>

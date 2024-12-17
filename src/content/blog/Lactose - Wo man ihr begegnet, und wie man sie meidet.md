@@ -6,7 +6,8 @@ description: Entdecke, wie du glutenfreie Mehlmischungen ganz einfach selbst
   auf eine glutenfreie Ernährung umsteigen möchten. Mit einfachen Zutaten und
   hilfreichen Tipps wird das Backen ohne Gluten zum Kinderspiel!
 pubDate: Jul 15 2022
-heroImage: uploads/blog-placeholder-4.jpg
+heroImage: uploads/Lactose-Wo-man-ihr-begegnet-und-wie-man-sie-meidet.jpg
+category: "Alltagsbewältigung"
 tags:
   - tag1
   - tag2
