@@ -6,7 +6,7 @@ description: Entdecke, wie du glutenfreie Mehlmischungen ganz einfach selbst
   auf eine glutenfreie Ernährung umsteigen möchten. Mit einfachen Zutaten und
   hilfreichen Tipps wird das Backen ohne Gluten zum Kinderspiel!
 pubDate: Jul 15 2022
-heroImage: uploads/Unterschied-zwischen-Allergie-und-Unverträglichkeit.jpg
+heroImage: uploads/Unterschied-zwischen-Allergie-und-Unvertraeglichkeit.jpg
 category: Gesundheit
 tags:
   - Allergie
