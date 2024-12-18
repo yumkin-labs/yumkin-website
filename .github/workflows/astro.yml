@@ -88,6 +88,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: www75.your-server.de
+          protocol: ftps
           username: yumkin_1
           # password: ${{ secrets.ftp_password }}
           password: mVDYGd2vNiXC5Vxe
