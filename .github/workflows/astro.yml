@@ -35,11 +35,11 @@ jobs:
       # --base "${{ steps.pages.outputs.base_path }}"
         working-directory: ${{ env.BUILD_PATH }}
       - name: ⬆️ Upload artifact
-        id: deployment
         uses: actions/upload-pages-artifact@v3
         with:
           name: static-site
           path: ${{ env.BUILD_PATH }}/dist
+          overwrite: true
   deploy:
     needs: build
     runs-on: ubuntu-latest
