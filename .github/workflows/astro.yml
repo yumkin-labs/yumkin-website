@@ -76,14 +76,14 @@ jobs:
       #  uses: actions/upload-pages-artifact@v3
       #  with:
       #    path: ${{ env.BUILD_PATH }}/dist
-  deploy:
+  #deploy:
     #environment:
     #  name: ftp-deployment
     #  url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
-    runs-on: ubuntu-latest
-    name: 🚀 Deploy
-    steps:
+ #   needs: build
+ #   runs-on: ubuntu-latest
+ #   name: 🚀 Deploy
+ #   steps:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
