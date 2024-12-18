@@ -40,6 +40,18 @@ jobs:
           name: static-site
           path: ${{ env.BUILD_PATH }}/dist
           overwrite: true
+      #- name: Cache Build
+      #  id: cache-build
+      #  uses: actions/cache@v2
+      #  env:
+      #    cache-name: build-output
+      #  with:
+      #    path: ${{ env.BUILD_PATH }}/dist
+      #    key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+      #    restore-keys: |
+      #      ${{ runner.os }}-build-${{ env.cache-name }}-
+      #      ${{ runner.os }}-build-
+      #      ${{ runner.os }}-
   deploy:
     needs: build
     runs-on: ubuntu-latest
@@ -49,7 +61,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: static-site
-          path: ${{ env.BUILD_PATH }}/dist/
+      #    path: ${{ env.BUILD_PATH }}/dist/
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
