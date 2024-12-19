@@ -1,10 +1,6 @@
 ---
 title: Unterschied zwischen Allergie und Unverträglichkeit
-description: Entdecke, wie du glutenfreie Mehlmischungen ganz einfach selbst
-  herstellen kannst! In diesem Blogbeitrag teile ich eine praktische Daumenregel
-  für die besten Substitutionen von glutenhaltigem Mehl – ideal für alle, die
-  auf eine glutenfreie Ernährung umsteigen möchten. Mit einfachen Zutaten und
-  hilfreichen Tipps wird das Backen ohne Gluten zum Kinderspiel!
+description: Entdecke, wie du glutenfreie Mehlmischungen ganz einfach selbst herstellen kannst! In diesem Blogbeitrag teile ich eine praktische Daumenregel für die besten Substitutionen von glutenhaltigem Mehl – ideal für alle, die auf eine glutenfreie Ernährung umsteigen möchten. Mit einfachen Zutaten und hilfreichen Tipps wird das Backen ohne Gluten zum Kinderspiel!
 pubDate: Jul 15 2022
 heroImage: uploads/Unterschied-zwischen-Allergie-und-Unvertraeglichkeit.jpg
 category: Gesundheit
@@ -14,7 +10,6 @@ tags:
   - Gesundheit
   - Ernährung
   - Immunsystem
-  - Medizin
 ---
 
 Dieses Thema ist besonders deshalb interessant, weil für viele Menschen genau dieser Unterschied nicht klar ist und Manche diese beiden Themen sogar miteinander gleich setzen. Es ist jedoch ein eklatanter Unterschied, ob es sich um eine Allergie oder eine Unverträglichkeit (oder auch genannt Intoleranz) handelt. Soviel gleich vorweg: Es ist keinesfalls so, dass eine Unverträglichkeit "harmloser" ist als eine Allergie!
