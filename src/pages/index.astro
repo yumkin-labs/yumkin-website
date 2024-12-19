@@ -1,10 +1,10 @@
 ---
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import Testimonials from "../components/Testimonials.astro";
+import BaseHead from "../components/general/BaseHead.astro";
+import Header from "../components/general/Header.astro";
+import Footer from "../components/general/Footer.astro";
+import Testimonials from "../components/content/Testimonials.astro";
 import {
   SITE_TITLE,
   SITE_DESCRIPTION,
@@ -13,7 +13,7 @@ import {
   SLIDER_CONTENT,
 } from "../consts";
 import HeroImage from "../../public/images/yumkin-hero3.jpg";
-import BlogTeaser from "../components/BlogTeaser.astro";
+import BlogTeaser from "../components/content/BlogTeaser.astro";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -110,8 +110,7 @@ const posts = (await getCollection("blog")).sort(
                   </h3>
                   <p class="mt-2 text-sm text-gray-500">
                     Trotz Einschränkungen genießt du leckeres,
-                    abwechslungsreiches Essen, das zu deinem Leben passt.r
-                    something of theirs. Don&#039;t send it here though.
+                    abwechslungsreiches Essen, das zu deinem Leben passt.
                   </p>
                 </div>
               </div>

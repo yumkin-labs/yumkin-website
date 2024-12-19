@@ -1,0 +1,48 @@
+---
+import { Image } from "astro:assets";
+import { SLIDER_CONTENT } from "../../consts";
+---
+
+<section>
+  <header class="mx-auto text-center max-w-3xl">
+    <h2
+      class="mt-2 text-balance text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl mb-4"
+    >
+      Endlich wieder Genuss und Spaß beim Essen.
+    </h2>
+    <p class="text-lg opacity-70">
+      Sag tschüss zu komplizierter Rezeptsuche. Wir helfen mit der kulinarischen
+      Alltagsplanung bei Lebensmittelunverträglichkeiten oder -Allergien.
+    </p>
+  </header>
+
+  <div class="bg-white">
+    <div class="mx-auto max-w-xl lg:max-w-7xl lg:px-8">
+      <div
+        class="mt-10 space-y-12 lg:grid sm:lg:grid-cols-2 lg:grid-cols-4 lg:gap-x-8 lg:space-y-0"
+      >
+        {
+          SLIDER_CONTENT.map((slider) => (
+            <div class="group block">
+              <Image
+                class="aspect-[3/2] w-full rounded-lg object-cover group-hover:opacity-75 lg:aspect-[5/6] object-top"
+                src={`${import.meta.env.BASE_URL}images/${slider.content}`}
+                alt=""
+                width={1000}
+                height={800}
+              />
+              <div class="pt-4">
+                <p class="text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
+                  {slider.label}
+                </p>
+                <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                  {slider.description}
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
