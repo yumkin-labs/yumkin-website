@@ -20,7 +20,7 @@ tags:
 Lactose ist ein interessanter Stoff und unglaublich vielseitig. So vielseitig, dass er hier einen extra Artikel bekommt. Heutzutage ist es kaum möglich, an Lactose vorbei zu kommen. Aber warum ist das so?
 
 Zunächst mal die Erklärung, um was genau es sich dabei überhaupt handelt: Lactose, oder auch Milchzucker, ist ein in Milch und Milchprodukten natürlich vorkommender Zucker.
-Es gibt Menschen mit Lactoseunverträglichkeit (auch genannt -Intoleranz), für die dieser Milchzucker ein Problem darstellt. (Zum Thema Allergien und Unverträglichkeiten haben wir einen extra Artikel) ==(_interner Hinweis: Im Blog dann entsprechend verlinken_)==. Es gibt zwar einige Ausnahmen wie bestimmte, lang gereifte Hartkäsesorten, in denen der Lactosegehalt extrem gering ist, obwohl es sich um ein Milchprodukt handelt, und somit auch bei Lactoseintoleranz vertragen wird. Ansonsten ist es ziemlich einfach: Bei Lactoseunverträglichkeit Finger weg von Milchprodukten!
+Es gibt Menschen mit Lactoseunverträglichkeit (auch genannt -Intoleranz), für die dieser Milchzucker ein Problem darstellt (Zum Thema Allergien und Unverträglichkeiten haben wir einen extra Artikel). Es gibt zwar einige Ausnahmen wie bestimmte, lang gereifte Hartkäsesorten, in denen der Lactosegehalt extrem gering ist, obwohl es sich um ein Milchprodukt handelt, und somit auch bei Lactoseintoleranz vertragen wird. Ansonsten ist es ziemlich einfach: Bei Lactoseunverträglichkeit Finger weg von Milchprodukten!
 
 ## So weit, so gut. Denkt man.
 
@@ -103,6 +103,6 @@ Folgende Zutaten enthalten **keine** Lactose, auch wenn sie danach klingen:
 Die gute Nachricht für alle, die an einer Lactoseunverträglichkeit leiden, aber trotzdem nicht auf Milchprodukte verzichten wollen: Mittlerweile gibt es eine Vielzahl an explizit gekennzeichneten, lactosefreien Milchprodukten. Der Trick dabei ist, dass die im Produkt natürlicherweise enthaltene Lactose industriell aufgespalten wird – das ist der Arbeitsschritt, der normalerweise durch körpereigene Enzyme durchgeführt wird, bei Menschen mit Lactoseunverträglichkeit aber durch einen Mangel an diesen Enzymen nicht stattfinden kann. Dazu muss allerdings erwähnt werden, dass lactosefreie Milchprodukte etwas süßer schmecken. Das liegt daran, dass bei der Aufspaltung von Lactose neben Galactose auch Glucose, also Traubenzucker, entsteht.
 Wem das nicht schmeckt, der hat die Möglichkeit, das fehlende Enzym Lactase in Form von Tabletten zum Essen einzunehmen. Auf diese Weise können auch Menschen mit einer Lactoseunverträglichkeit in gewissen Mengen konventionelle Milchprodukte verträglich zu sich nehmen. Schaut am besten, wie es für euch am Bekömmlichsten ist.
 
-Und wer auch das nicht möchte, der kann auf eine mittlerweile extrem vielseitige Auswahl an veganen Milchersatzprodukten zurück greifen. (auch hierzu haben wir einen Artikel geschrieben) ( ==_hier Querverweis auf den entsprechenden Artikel_== )
+Und wer auch das nicht möchte, der kann auf eine mittlerweile extrem vielseitige Auswahl an veganen Milchersatzprodukten zurück greifen (auch hierzu könnt ihr Details in einem dedizierten Artikel lesen).
 
 Zusammenfassend kann man sagen, dass es durchaus möglich ist, der Lactose aus dem Weg zu gehen. Nun wisst ihr auch, wie!
