@@ -1,9 +1,11 @@
 ---
-import YumkinLogo from "./YumkinLogo.astro";
-import NavBar from "./NavBar.astro";
+import YumkinLogo from "../general/YumkinLogo.astro";
+import NavBar from "../general/NavBar.astro";
 import { Image } from "astro:assets";
 
-const { heroImage, title, description } = Astro.props;
+import defaultHeroImage from "./../../../src/assets/images/yumkin-hero3.jpg";
+
+const { heroImage = defaultHeroImage, title, description } = Astro.props;
 ---
 
 <header class="relative" x-data="{ open: false }">

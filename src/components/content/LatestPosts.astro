@@ -1,0 +1,28 @@
+---
+import { getCollection } from "astro:content";
+import BlogTeaser from "../../components/content/BlogTeaser.astro";
+import Button from "../helper/Button.astro";
+const posts = (await getCollection("blog"))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+---
+
+<section>
+  <header class="max-w-2xl mx-auto mb-8">
+    <h2 class="text-xl md:text-2xl lg:text-3xl mb-4 font-semibold">
+      Immer up to date: Wissenswertes, Tipps und Tricks!
+    </h2>
+    <p class="text-lg opacity-70">
+      Entdecke Wissenswertes, Updates und Inspirationen rund um Ernährung und
+      unsere App.
+    </p>
+  </header>
+  <div
+    class="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 text-left"
+  >
+    {posts.map((post) => <BlogTeaser post={post} />)}
+  </div>
+  <footer class="mt-12">
+    <Button href="/blog">Alle Artikel anzeigen</Button>
+  </footer>
+</section>

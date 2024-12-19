@@ -1,6 +1,10 @@
 ---
 import Fullwidth from "../layouts/Fullwidth.astro";
 import { Image } from "astro:assets";
+import teamJonas from "../../public/images/team/jonas.jpg";
+import teamSybilla from "../../public/images/team/sybilla.jpg";
+import teamAnnika from "../../public/images/team/annika.jpg";
+import teamRobin from "../../public/images/team/robin.jpg";
 ---
 
 <Fullwidth title="Über uns" description="Die Personen hinter der App">
@@ -36,7 +40,7 @@ import { Image } from "astro:assets";
               <Image
                 width={750}
                 height={500}
-                src="https://images.unsplash.com/photo-1670272502246-768d249768ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&q=80"
+                src={teamSybilla}
                 alt=""
                 class="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover"
               />
@@ -50,7 +54,7 @@ import { Image } from "astro:assets";
                 <Image
                   width={800}
                   height={600}
-                  src="https://images.unsplash.com/photo-1605656816944-971cd5c1407f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=768&h=604&q=80"
+                  src={teamAnnika}
                   alt=""
                   class="aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
                 />
@@ -61,7 +65,7 @@ import { Image } from "astro:assets";
                 <Image
                   width={750}
                   height={500}
-                  src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&h=842&q=80"
+                  src={teamJonas}
                   alt=""
                   class="aspect-[7/5] w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
                 />
@@ -72,7 +76,7 @@ import { Image } from "astro:assets";
                 <Image
                   width={800}
                   height={600}
-                  src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=768&h=604&q=80"
+                  src={teamRobin}
                   alt=""
                   class="aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover"
                 />
@@ -488,54 +492,6 @@ import { Image } from "astro:assets";
           </dd>
         </div>
       </dl>
-    </div>
-
-    <!-- Logo cloud -->
-    <div class="relative isolate -z-10 mt-32 sm:mt-48 mb-32">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <h2 class="text-center text-lg/8 font-semibold text-gray-900">
-          Unsere Partner
-        </h2>
-        <div
-          class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5"
-        >
-          <Image
-            class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-            src="https://tailwindui.com/plus/img/logos/158x48/transistor-logo-gray-900.svg"
-            alt="Transistor"
-            width="158"
-            height="48"
-          />
-          <Image
-            class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-            src="https://tailwindui.com/plus/img/logos/158x48/reform-logo-gray-900.svg"
-            alt="Reform"
-            width="158"
-            height="48"
-          />
-          <Image
-            class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-            src="https://tailwindui.com/plus/img/logos/158x48/tuple-logo-gray-900.svg"
-            alt="Tuple"
-            width="158"
-            height="48"
-          />
-          <Image
-            class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
-            src="https://tailwindui.com/plus/img/logos/158x48/savvycal-logo-gray-900.svg"
-            alt="SavvyCal"
-            width="158"
-            height="48"
-          />
-          <Image
-            class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
-            src="https://tailwindui.com/plus/img/logos/158x48/statamic-logo-gray-900.svg"
-            alt="Statamic"
-            width="158"
-            height="48"
-          />
-        </div>
-      </div>
     </div>
   </div>
 </Fullwidth>

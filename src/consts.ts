@@ -7,7 +7,7 @@ export const SITE_DESCRIPTION =
 export const HERO_TITLE =
   "Yumkin – der digitale Alltagshelfer für barrierefreien Genuss";
 export const HERO_SUBTITLE =
-  "Was kann ich jetzt überhaupt noch essen? Und wie bereite ich mir damit etwas Leckeres zu? Deine indivualisierte App für Lebensmittelunverträglichkeiten und -allergien.";
+  "Die Diagnose Lebensmittelallergie oder -Unverträglichkeit steht – doch die Frage bleibt: Was kann ich jetzt überhaupt noch essen? Entdecke, wie du köstliche Gerichte zauberst und bedenkenlos genießen kannst – mit deiner personalisierten Unterstützung!";
 
 export const SLIDER_CONTENT: SliderContentItem[] = [
   {
