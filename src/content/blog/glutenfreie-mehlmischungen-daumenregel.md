@@ -1,14 +1,9 @@
 ---
-title: Glutenfreie Mehlmischungen selbstgemacht - Einfache Daumenregel für
-  Substitutionen
-description: Entdecke, wie du glutenfreie Mehlmischungen ganz einfach selbst
-  herstellen kannst! In diesem Blogbeitrag teile ich eine praktische Daumenregel
-  für die besten Substitutionen von glutenhaltigem Mehl – ideal für alle, die
-  auf eine glutenfreie Ernährung umsteigen möchten. Mit einfachen Zutaten und
-  hilfreichen Tipps wird das Backen ohne Gluten zum Kinderspiel!
-pubDate: Jul 15 2022
+title: Glutenfreie Mehlmischungen selbstgemacht - Einfache Daumenregel für Substitutionen
+description: Entdecke, wie du glutenfreie Mehlmischungen ganz einfach selbst herstellen kannst! In diesem Blogbeitrag teile ich eine praktische Daumenregel für die besten Substitutionen von glutenhaltigem Mehl – ideal für alle, die auf eine glutenfreie Ernährung umsteigen möchten. Mit einfachen Zutaten und hilfreichen Tipps wird das Backen ohne Gluten zum Kinderspiel!
+pubDate: Dec 20 2024
 heroImage: uploads/blog-glutenfreie-mehlmischungen-daumenregel.jpg
-category: "Wissenswertes rund um Ernährung"
+category: Alltagsbewältigung
 tags:
   - Glutenfrei
   - Backen
