@@ -1,11 +1,7 @@
 ---
 title: Zuckeralternativen und der Mythos von Zuckerfrei
-description: Entdecke, wie du glutenfreie Mehlmischungen ganz einfach selbst
-  herstellen kannst! In diesem Blogbeitrag teile ich eine praktische Daumenregel
-  für die besten Substitutionen von glutenhaltigem Mehl – ideal für alle, die
-  auf eine glutenfreie Ernährung umsteigen möchten. Mit einfachen Zutaten und
-  hilfreichen Tipps wird das Backen ohne Gluten zum Kinderspiel!
-pubDate: Jul 15 2022
+description: Eine Übersicht über Zucker, süßende Lebensmittel und ihre Zusammensetzung. Ebenso geben wir einen Überblick über einige  Zuckeraustauschstoffe und ihre Anwendungsmöglichkeiten. Alles mit Fokus auf ihre Verträglichkeit. 
+pubDate: Dec 20 2024
 heroImage: uploads/Zuckeralternativen-und-der-Mythos-von-Zuckerfrei.jpg
 category: "Wissenswertes rund um Ernährung"
 tags:
@@ -21,7 +17,7 @@ tags:
   - Substitutionen
 ---
 
- Mittlerweile gibt es viele Produkte, die damit werben, "zuckerfrei" oder "ohne zugesetzten Zucker" zu sein. Was man dabei unbedingt wissen sollte: Diese Aussage bezieht sich nur auf Mono- oder Disaccharide (wie z.B. Haushaltszucker (Saccharose), Fructose oder Glucose). Es darf also jedes Lebensmittel als "zuckerfrei" deklariert werden, solange keine Mono- oder Disaccharide zugesetzt sind! Schaut man sich die Zutatenliste genau an, werden andere Süßungsmittel oder Fruchtkonzentrate eingesetzt, um den klassischen Industriezucker zu ersetzen. Wirklich zuckerfrei ist das nicht - und das kann es auch gar nicht sein. Etwas, das süß schmecken soll, muss in irgendeiner Weise Zucker oder ein Süßungsmittel enthalten. Alles Andere wäre Zauberei.
+Mittlerweile gibt es viele Produkte, die damit werben, "zuckerfrei" oder "ohne zugesetzten Zucker" zu sein. Was man dabei unbedingt wissen sollte: Diese Aussage bezieht sich nur auf Mono- oder Disaccharide (wie z.B. Haushaltszucker (Saccharose), Fructose oder Glucose). Es darf also jedes Lebensmittel als "zuckerfrei" deklariert werden, solange keine Mono- oder Disaccharide zugesetzt sind! Schaut man sich die Zutatenliste genau an, werden andere Süßungsmittel oder Fruchtkonzentrate eingesetzt, um den klassischen Industriezucker zu ersetzen. Wirklich zuckerfrei ist das nicht - und das kann es auch gar nicht sein. Etwas, das süß schmecken soll, muss in irgendeiner Weise Zucker oder ein Süßungsmittel enthalten. Alles Andere wäre Zauberei.
 Hier gleich mal zu Beginn eine Erläuterung der Kategorien:
 
 - **Zucker**: hier liegt der Fokus auf Fructose (Fruchtzucker), Saccharose (Haushaltszucker) und Glucose (Traubenzucker). Es gibt auch andere Zuckerarten wie bspw. Milchzucker (Lactose), diesen lassen wir hier aber bewusst aus, da er zum klassischen Süßen eher weniger zum Einsatz kommt.
