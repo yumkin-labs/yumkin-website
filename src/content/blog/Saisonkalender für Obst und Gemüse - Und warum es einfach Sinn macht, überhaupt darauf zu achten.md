@@ -3,7 +3,7 @@ title: Saisonkalender für Obst und Gemüse - Und warum es einfach Sinn macht, �
 description: Ein einfacher und übersichtlicher Überblick über saisonales Obst und Gemüse und die Vorteile einer saisonalen Ernährung.
 pubDate: Dec 20 2024
 heroImage: uploads/Lactose-Wo-man-ihr-begegnet-und-wie-man-sie-meidet.jpg
-category: Alltagsbewältigung
+category: Wissenswertes rund um Ernährung
 tags:
   - Obst
   - Gemüse
